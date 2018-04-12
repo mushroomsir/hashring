@@ -51,6 +51,10 @@ func (h *HashRing) Size() int {
 	return len(h.nodes)
 }
 
+func (h *HashRing) Nodes() []string {
+	return h.nodes
+}
+
 func (h *HashRing) UpdateWithWeights(weights map[string]int) {
 	nodesChgFlg := false
 	if len(weights) != len(h.weights) {
